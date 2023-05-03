@@ -8,9 +8,10 @@ app.get('/', (req, res) => {
 
   sdk.auth('rnd_68t51TLFYq5un2nPwteE4I87mVnC');
   sdk.getServices({limit: '20'})
-    .then(({ data }) => console.log(data))
-    .catch(err => console.error(err));
-  //res.send("hello")
+    .then(({ data }) => res.send(data))
+    .catch(err => res.send(err));
+ 
+    //res.send("hello")
 
 });
 
